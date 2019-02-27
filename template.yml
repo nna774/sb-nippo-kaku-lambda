@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+Resources: 
+  Function: 
+    Type: AWS::Serverless::Function 
+    Properties: 
+      Handler: lambda.handler
+      Runtime: ruby2.5 
+      FunctionName: sb-nippo-kaku
+      Timeout: 30
+      Role: arn:aws:iam::486414336274:role/lambda-none
+      Environment:
+        Variables:
+          PROJECT: https://scrapbox.io/rebuild-kitashirakawa
+          TZ: Asia/Tokyo
