@@ -21,7 +21,7 @@ def handler(event:, context:)
   result = JSON.parse(res.payload.string)
   last = result['last']
   if last.nil? || today.strftime('%D') != Time.at(last.to_i).strftime('%D')
-    body = "\n\n\n##{%w(日 月 火 水 木 金 土)[today.wday]}曜日 #nippo"
+    body = "\n\n##{%w(日 月 火 水 木 金 土)[today.wday]}曜日 #nippo"
     to += "?body=#{URI.encode(body)}"
   end
   { location: to }
