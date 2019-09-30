@@ -6,7 +6,7 @@ Resources:
     Properties: 
       Handler: lambda.handler
       Runtime: ruby2.5 
-      FunctionName: sb-nippo-kaku
+      FunctionName: sb-nippo-kaku-with-kpt
       Timeout: 30
       Role: arn:aws:iam::486414336274:role/invoke-lastorder
       Environment:
